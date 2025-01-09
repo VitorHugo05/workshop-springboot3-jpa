@@ -1,7 +1,7 @@
 package com.vitordev.course.resources;
 
 import com.vitordev.course.entities.Product;
-import com.vitordev.course.services.ProductServices;
+import com.vitordev.course.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,17 +16,17 @@ import java.util.List;
 public class ProductResource {
 
     @Autowired
-    private ProductServices productServices;
+    private ProductService productService;
 
     @GetMapping
     public ResponseEntity<List<Product>> findAll() {
-        List<Product> users = productServices.findAll();
+        List<Product> users = productService.findAll();
         return ResponseEntity.ok().body(users);
     }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Product> findById(@PathVariable Long id) {
-        Product obj = productServices.findById(id);
+        Product obj = productService.findById(id);
         return ResponseEntity.ok().body(obj);
     }
 }

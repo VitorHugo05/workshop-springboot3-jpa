@@ -1,7 +1,7 @@
 package com.vitordev.course.resources;
 
 import com.vitordev.course.entities.Category;
-import com.vitordev.course.services.CategoryServices;
+import com.vitordev.course.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +16,7 @@ import java.util.List;
 public class CategoryResource {
 
     @Autowired
-    private CategoryServices categoryServices;
+    private CategoryService categoryServices;
 
     @GetMapping
     public ResponseEntity<List<Category>> findAll() {

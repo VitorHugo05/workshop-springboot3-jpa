@@ -1,7 +1,7 @@
 package com.vitordev.course.resources;
 
 import com.vitordev.course.entities.Order;
-import com.vitordev.course.services.OrderServices;
+import com.vitordev.course.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,17 +16,17 @@ import java.util.List;
 public class OrderResource {
 
     @Autowired
-    private OrderServices orderServices;
+    private OrderService orderService;
 
     @GetMapping
     public ResponseEntity<List<Order>> findAll() {
-        List<Order> orders = orderServices.findAll();
+        List<Order> orders = orderService.findAll();
         return ResponseEntity.ok().body(orders);
     }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Order> findById(@PathVariable Long id) {
-        Order obj = orderServices.findById(id);
+        Order obj = orderService.findById(id);
         return ResponseEntity.ok().body(obj);
     }
 }
