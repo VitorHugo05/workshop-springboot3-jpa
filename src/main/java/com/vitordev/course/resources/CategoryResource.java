@@ -1,9 +1,7 @@
 package com.vitordev.course.resources;
 
 import com.vitordev.course.entities.Category;
-import com.vitordev.course.entities.User;
 import com.vitordev.course.services.CategoryServices;
-import com.vitordev.course.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

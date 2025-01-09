@@ -1,9 +1,7 @@
 package com.vitordev.course.services;
 
 import com.vitordev.course.entities.Category;
-import com.vitordev.course.entities.User;
 import com.vitordev.course.repositories.CategoryRepository;
-import com.vitordev.course.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

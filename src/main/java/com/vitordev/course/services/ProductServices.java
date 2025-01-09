@@ -1,8 +1,6 @@
 package com.vitordev.course.services;
 
-import com.vitordev.course.entities.Category;
 import com.vitordev.course.entities.Product;
-import com.vitordev.course.repositories.CategoryRepository;
 import com.vitordev.course.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

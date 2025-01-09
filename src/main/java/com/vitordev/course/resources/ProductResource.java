@@ -1,8 +1,6 @@
 package com.vitordev.course.resources;
 
-import com.vitordev.course.entities.Category;
 import com.vitordev.course.entities.Product;
-import com.vitordev.course.services.CategoryServices;
 import com.vitordev.course.services.ProductServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
